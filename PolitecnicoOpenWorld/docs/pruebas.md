@@ -17,7 +17,7 @@ resuelven los impactos.
 
 ## Entorno
 
-- **Dispositivo: SAMSUNG S25 ULTRA** 
+- **Dispositivo:** Samsung Galaxy S25 Ultra (dispositivo físico)
 - **Build:** `debug`
 - **Commit probado:** `ea6f21b6`
 
