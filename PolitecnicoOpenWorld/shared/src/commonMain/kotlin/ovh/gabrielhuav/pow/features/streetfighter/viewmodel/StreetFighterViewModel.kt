@@ -315,7 +315,8 @@ open class StreetFighterViewModel(
     // 🆕 (2026-07-19c) Sin cooldown en hurt para permitir interrupción inmediata en combos
     internal val hurtVoiceCooldownMs = 0L
     internal val attackVoiceCooldownMs = 4200L
-
+    // 🆕 Reacción de voz cuando un golpe ESPECIAL conecta sin bloqueo.
+    internal var lastSuperHitReactionMs = 0L
     /** Voz de DAÑO (pack HURT, variante al azar) con cooldown por índice.
      * Si la vida baja del 25% (<= 50 de 200) y tiene audio de lowHp de una sola vez, lo prioriza. */
     internal val arcadeRepo = environment.arcade
