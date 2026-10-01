@@ -110,7 +110,6 @@ Evidencias en video enlazadas desde la sección **QA evidence** del PR #154.
 | CP-05 | Condición alterna — especial fallado | @TheMike54 | `dda3b54d` | Pixel 8 / API 35 | Especial esquivado → no suena | Proyectil saltado: sin daño, sin reacción | Aprobado |
 | CP-06 | Navegación y estado — revancha | @TheMike54 → Victor Moreno | `dda3b54d` → `23690ab7` | Pixel 8 / API 35 → S25 Ultra | Tras salir y volver a pelea, sigue sonando | **Falló** en `dda3b54d`; **aprobado** tras corregir en `23690ab7` | Corregido y reprobado |
 | CP-07 | Compatibilidad / entorno | Ambos | `dda3b54d`, `23690ab7` | Emulador API 35 **y** físico Android 16 | Mismo comportamiento en ambos entornos | Consistente en los dos | Aprobado |
-| CP-08 | Accesibilidad | _(pendiente)_ | | | Texto ampliado del sistema: controles y subtítulos legibles | _(pendiente)_ | _(pendiente)_ |
 
 ## 6. Hallazgos
 
