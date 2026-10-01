@@ -2006,6 +2006,7 @@ open class StreetFighterViewModel(
         introVoiceSent = false
         lastHurtVoiceMs.fill(0L)
         lastAttackVoiceMs.fill(0L)
+        lastSuperHitReactionMs = 0L
         lastHitTakenMs.fill(0L)
         lowHpVoiceTriggered.fill(false)
         rapidHitsTaken.fill(0)
@@ -2277,6 +2278,7 @@ open class StreetFighterViewModel(
         dirHeldPrev[1] = false to false
         lastHurtVoiceMs.fill(0L)
         lastAttackVoiceMs.fill(0L)
+        lastSuperHitReactionMs = 0L
         lowHpVoiceTriggered.fill(false)
         pendingAttacks.clear()
         pendingBonusPower = null

@@ -42,4 +42,12 @@ class SfSuperHitReactionTest {
     fun `un golpe normal no cuenta como golpe especial`() {
         assertFalse(SfSuperHitReaction.esEstadoEspecial(SfFighterState.CROUCH))
     }
+
+    // Regresion del bug reportado por @TheMike54 en la revision del PR #154:
+    // el reloj de juego vuelve a 0 en cada pelea, pero la marca de la ultima
+    // reaccion se conservaba, y la reaccion quedaba muda el resto de la pelea.
+    @Test
+    fun `suena en una pelea nueva aunque el reloj se haya reiniciado`() {
+        assertTrue(SfSuperHitReaction.deberiaSonar(esGolpeEspecial = true, bloqueado = false, ahora = 0L, ultimaVezMs = 87_600L))
+    }
 }

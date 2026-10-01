@@ -1,7 +1,7 @@
 # Pruebas — Reacción de voz al conectar un golpe especial
 
-- **Issue:** #1
-- **Pull Request:** #2
+- **Issue:** VictorMoreno-Code/PolitecnicoOpenWorld#1
+- **Pull Request:** gabrielhuav/PolitecnicoOpenWorld#154
 - **Rama:** `feature/1-super-hit-reaction-sound`
 - **Fecha:** 2026-09-28
 

@@ -3,9 +3,10 @@ package ovh.gabrielhuav.pow.domain.streetfighter
 import ovh.gabrielhuav.pow.domain.models.streetfighter.SfFighterState
 
 /**
- Reacción de voz cuando un golpe ESPECIAL conecta (súper, poder extra o fatality).
- solo debe sonar si: el golpe es de un estado especial, NO fue bloqueado, y ya pasó el
- cooldown desde la última vez que sonó (para no repetirse si conectan varios seguidos).
+ * Reacción de voz cuando un golpe ESPECIAL conecta (súper, poder extra o fatality).
+ *
+ * Solo debe sonar si: el golpe es de un estado especial, NO fue bloqueado, y ya pasó el
+ * cooldown desde la última vez que sonó (para no repetirse si conectan varios seguidos).
  */
 object SfSuperHitReaction {
 
@@ -13,6 +14,9 @@ object SfSuperHitReaction {
 
     fun deberiaSonar(esGolpeEspecial: Boolean, bloqueado: Boolean, ahora: Long, ultimaVezMs: Long): Boolean {
         if (!esGolpeEspecial || bloqueado) return false
+        // El reloj de juego vuelve a 0 en cada pelea, así que una marca mayor que
+        // "ahora" es de una pelea anterior: ya no hay cooldown pendiente.
+        if (ahora < ultimaVezMs) return true
         return ahora - ultimaVezMs >= COOLDOWN_MS
     }
 
